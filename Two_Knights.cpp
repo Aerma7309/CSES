@@ -18,7 +18,6 @@ signed main()
     int n;
     cin >> n;
     for (int i = 1; i <= n; i++)
-        cout <<((i - 1) * (i + 4) * (i * i - 3 * i + 4) / 2)<< ' ';
-
+        cout <<((i - 1) * (i + 4) * (i * i - 3 * i + 4) / 2)<< '\n';
     return 0;
 }
