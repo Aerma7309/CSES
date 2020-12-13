@@ -17,17 +17,13 @@ signed main()
 {
     int n;
     cin >> n;
-    vector<int> v(n);
-    for (auto &i : v)
-        cin >> i;
     int res = 0;
-    int prev_max = v[0];
-    for (int i = 1, t; i < v.size(); i++)
+    int mx = 0;
+    for (int i = 0, t; i < n; i++)
     {
-        t = prev_max - v[i];
-        if (t > 0)
-            res += t;
-        prev_max = max(prev_max,v[i]);
+        cin >> t;
+        mx = max(mx, t);
+        res += mx - t;
     }
     cout << res;
     return 0;
