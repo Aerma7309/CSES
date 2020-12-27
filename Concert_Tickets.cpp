@@ -22,13 +22,9 @@ signed main()
     for (int i = 0, t; i < m; i++)
     {
         cin >> t;
-        auto itr = mp.find(t);
-        if (itr == mp.end())
-        {
-            itr = mp.lower_bound(t);
-            if (itr != mp.begin())
+        auto itr = mp.lower_bound(t);
+        if (itr != mp.begin() and *itr!=t)
                 --itr;
-        }
         if (mp.empty() or *itr > t)
             cout << -1 << '\n';
         else
